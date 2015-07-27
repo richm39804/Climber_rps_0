@@ -1,0 +1,13 @@
+<p>
+  <strong>Title:</strong>
+  <%= @repair.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @repair.text %>
+</p>
+
+
+<%= link_to 'Edit', edit_repair_path(@repair) %> |
+<%= link_to 'Back', repairs_path %>

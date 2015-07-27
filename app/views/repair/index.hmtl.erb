@@ -1,0 +1,19 @@
+<h1>Hello, Rails!</h1>
+<%= link_to 'My Blog', controller: 'repairs' %>
+<%= link_to 'New Repair', new_repair_path %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th colspan="2"></th>
+  </tr>
+
+  <% @repairs.each do |repair| %>
+    <tr>
+      <td><%= repair.title %></td>
+      <td><%= repair.text %></td>
+      <td><%= link_to 'Show', repair_path(repair) %></td>
+      <td><%= link_to 'Edit', edit_repair_path(repair) %></td>
+    </tr>
+  <% end %>
+</table>
